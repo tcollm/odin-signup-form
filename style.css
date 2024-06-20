@@ -13,11 +13,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 40%;
+    width: 35%;
     flex-shrink: 0;
 }
 
 .form-container {
-    flex-basis: 60%;
+    flex-basis: 65%;
     flex-shrink: 0;
 }
