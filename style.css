@@ -25,6 +25,15 @@ body {
     flex-shrink: 0;
 }
 
+.image-content {
+    color: #fff;
+    a {
+       color: #fff;
+    }
+    font-size: 0.8rem;
+    bottom: 0;
+}
+
 .content-container {
     flex-basis: 65%;
     flex-shrink: 0;
