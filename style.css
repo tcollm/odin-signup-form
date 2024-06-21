@@ -25,6 +25,7 @@ body {
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .image-content {
@@ -36,7 +37,7 @@ body {
     font-size: 0.8rem;
     margin-top: auto;
     margin-bottom: 8px;
-    margin-left: calc(35%/2);
+    /* margin-left: calc(35%/2); */
 }
 
 .content-container {
@@ -48,12 +49,30 @@ body {
 
 .description {
     margin: 128px 32px 48px;
+    font-weight: 550;
+    div {
+        margin-top: 16px;
+    }
 }
 
 .form-container {
     background-color: #fff;
     justify-self: center;
     padding: 16px 32px;
+}
+
+form {
+    font-size: 0.6rem;
+    color: rgb(83, 83, 83);
+    legend {
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: black;
+    }
+    input {
+        border: 1px solid lightgray;
+        border-radius: 2px;
+    }
 }
 
 .login button {
