@@ -104,3 +104,12 @@ form input {
         color: var(--green);
     }
 }
+
+
+/* TODO: 
+    - Fix legend
+    - Make buttons more responsive?
+    - Change input borders on click
+    - Change input confirmations (valid 
+    phone numbers, emails, etc.)
+*/
