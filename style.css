@@ -16,13 +16,15 @@ body {
     font-weight: 545;
 }
 
-.image {
+.image-container {
     background-image: url(images/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 35%;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .image-content {
@@ -30,8 +32,11 @@ body {
     a {
        color: #fff;
     }
+    justify-content: center;
     font-size: 0.8rem;
-    bottom: 0;
+    margin-top: auto;
+    margin-bottom: 8px;
+    margin-left: calc(35%/2);
 }
 
 .content-container {
