@@ -61,7 +61,7 @@ body {
     padding: 16px 32px;
 }
 
-form {
+/* form {
     font-size: 0.6rem;
     color: rgb(83, 83, 83);
     legend {
@@ -72,8 +72,39 @@ form {
     input {
         border: 1px solid lightgray;
         border-radius: 2px;
+        width: 100%;
+        margin-bottom: 16px;
     }
+    input, label {
+        display: block;
+        margin-bottom: 8px;
+    }
+} */
+
+form {
+    font-size: 0.6rem;
+    color: rgb(83, 83, 83);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
+
+form label,
+form input {
+    display: block;
+    width: 100%;
+}
+
+form label {
+    margin-bottom: 8px;
+}
+
+form input {
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 8px;
+}
+
 
 .login button {
     box-sizing: border-box;
