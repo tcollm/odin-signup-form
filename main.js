@@ -1,21 +1,45 @@
-
-
-document.addEventListener('submit', () => {
-    validateForm(); 
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('signup'); 
+    form.addEventListener('submit', (e) => {
+        validateForm(e); 
+    })
 })
 
 // get document inputs and output errors 
-function validateForm() {
-    const ids = ['first_name', 'last_name', 'phone_number', 'pwd', 'confirm_pwd']
+function validateForm(event) {
+    // const form = document.getElementById('signup');
+    const ids = ['first_name', 'last_name', 'email', 'phone_number', 'pwd', 'confirm_pwd']
     const messages = ids
         .map(id => document.getElementById(id))
         .filter(input => input.value === '' || input.value === null)
         .map(input => `${input.id} is empty`); 
 
-    console.log(messages[i]); 
+    displayErrors(messages); 
 
+    if (messages.length > 0) {
+        event.preventDefault(); 
+    }
 }
 
+function displayErrors(messages) {
+    messages.forEach((message) => {
+        let messageArray = message.split(' ');
+        let id = messageArray.shift(); 
+        let text = messageArray.join(' ');  
 
+        console.log(message); 
 
+        const parent = document.getElementById(id); 
 
+        if (parent) {
+            // let error = document.createElement('div');
+            // error.textContent = text; 
+            // // error.classList.add('error-message'); // Style as a CSS error message
+            // parent.appendChild(error);
+
+            parent.style.border = '2px solid red'; 
+        } else {
+            console.error(`Parent element with ID '${id}' not found.`)
+        }
+    });
+}
