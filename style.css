@@ -86,6 +86,12 @@ form input {
     padding: 4px;
 }
 
+form input:focus {
+    border: 1px solid blue;
+    outline: none;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+}
+
 .login button {
     box-sizing: border-box;
     margin: 24px 32px;
