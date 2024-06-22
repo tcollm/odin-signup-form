@@ -32,6 +32,11 @@ function displayErrors(messages) {
         const errorContainer = document.getElementById(`${id}-error`); 
 
         if (errorContainer) {
+            // TODO: error message does not erase when field is not empty
+            while (errorContainer.firstChild) {
+                errorContainer.removeChild(errorContainer.firstChild); 
+            }
+
             let error = document.createElement('div');
             // get the label text content and append it instead of id
             let label = document.querySelector(`label[for='${id}']`).textContent.toLowerCase(); 
