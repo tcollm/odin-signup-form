@@ -29,18 +29,23 @@ function displayErrors(messages) {
 
         console.log(message); 
 
-        const parent = document.getElementById(id); 
+        const errorContainer = document.getElementById(`${id}-error`); 
 
-        if (parent) {
+        if (errorContainer) {
             // TODO: append div to input to state the error
             let error = document.createElement('div');
             error.textContent = text; 
             // error.classList.add('error-message'); // Style as a CSS error message
-            parent.appendChild(error);
+            errorContainer.appendChild(error);
 
-            parent.style.border = '2px solid red'; 
+            const input = document.getElementById(id); 
+            if (input) {
+                input.style.border = '2px solid red'; 
+            } else {
+                console.error(`Parent element with ID '${id}' not found.`)
+            }
         } else {
-            console.error(`Parent element with ID '${id}' not found.`)
+            console.error(`Error container with ID '${id}-error' not found.`)
         }
     });
 }
