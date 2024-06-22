@@ -32,15 +32,19 @@ function displayErrors(messages) {
         const errorContainer = document.getElementById(`${id}-error`); 
 
         if (errorContainer) {
-            // TODO: append div to input to state the error
             let error = document.createElement('div');
-            error.textContent = text; 
-            // error.classList.add('error-message'); // Style as a CSS error message
+            // get the label text content and append it instead of id
+            let label = document.querySelector(`label[for='${id}']`).textContent.toLowerCase(); 
+            label = label.charAt(0).toUpperCase() + label.slice(1); 
+
+            error.textContent = `${label} ${text}.`
+            error.style.color = 'red'; 
             errorContainer.appendChild(error);
 
             const input = document.getElementById(id); 
             if (input) {
-                input.style.border = '2px solid red'; 
+                input.style.border = '1px solid red'; 
+                input.style.borderRadius = '2px'
             } else {
                 console.error(`Parent element with ID '${id}' not found.`)
             }
