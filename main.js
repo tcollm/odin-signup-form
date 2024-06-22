@@ -32,10 +32,11 @@ function displayErrors(messages) {
         const parent = document.getElementById(id); 
 
         if (parent) {
-            // let error = document.createElement('div');
-            // error.textContent = text; 
-            // // error.classList.add('error-message'); // Style as a CSS error message
-            // parent.appendChild(error);
+            // TODO: append div to input to state the error
+            let error = document.createElement('div');
+            error.textContent = text; 
+            // error.classList.add('error-message'); // Style as a CSS error message
+            parent.appendChild(error);
 
             parent.style.border = '2px solid red'; 
         } else {
