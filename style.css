@@ -53,6 +53,7 @@ body {
     div {
         margin-top: 16px;
     }
+    max-width: 640px;
 }
 
 .form-container {
@@ -102,6 +103,11 @@ form input:focus {
     border-radius: 8px;
     border: none;
     color: #fff;
+}
+
+.login button:hover {
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .login div{
