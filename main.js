@@ -14,10 +14,19 @@ function validateForm(event) {
         .filter(input => input.value === '' || input.value === null)
         .map(input => `${input.id} is empty`); 
 
+    messages.push(validatePasswords(messages[4].value, messages[5].value)); 
     displayErrors(messages); 
 
     if (messages.length > 0) {
         event.preventDefault(); 
+    }
+}
+
+function validatePasswords(password, c_password) {
+    if (password === c_password) {
+        return null; 
+    } else {
+        return 'Passwords do not match'; 
     }
 }
 
