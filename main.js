@@ -67,3 +67,10 @@ function displayErrors(messages) {
         }
     });
 }
+
+// TODO:
+// - Error message does not erase when field is not empty
+// - Form submits when you enter even a single field,
+//   I think that the messages may need to be defined 
+//   globally. 
+// - Password validation does not work. 
