@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <!-- <script src="main.js" defer></script> -->
 </head>
 <body>
     <div class="image-container">
@@ -23,15 +23,17 @@
         </div>        
         <div class="form-container">
             <!-- novalidate -->
-            <form action="#" id="signup" novalidate>
+            <form action="#" id="signup">
                 <div>
                     <label for="first_name">FIRST NAME</label>
-                    <input type="text" id="first_name" name="user_first_name" required/>
+                    <input type="text" id="first_name" name="user_first_name" 
+                        minlength="2" required/>
                     <div id="first_name-error"></div>
                 </div>
                 <div>
                     <label for="last_name">LAST NAME</label>
-                    <input type="text" id="last_name" name="user_last_name" required/>
+                    <input type="text" id="last_name" name="user_last_name" 
+                        minlength="2" required/>
                     <div id="last_name-error"></div>
                 </div>
                 <div>
@@ -41,18 +43,20 @@
                 </div>
                 <div>
                     <label for="phone_number">PHONE NUMBER</label>
-                    <input type="text" id="phone_number" name="user_phone"
-                    pattern="[0-9]{10}" required>
+                    <input type="tel" id="phone_number" name="user_phone"
+                        pattern="[0-9]{10}" required>
                     <div id="phone_number-error"></div>
                 </div>
                 <div>
                     <label for="pwd">PASSWORD</label>
-                    <input type="password" id="pwd" name="user_password" required/>
+                    <input type="password" id="pwd" name="user_password" 
+                        minlength="8" required/>
                     <div id="pwd-error"></div>
                 </div>
                 <div>
                     <label for="confirm_pwd">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm_pwd" name="confirm_password" required/>
+                    <input type="password" id="confirm_pwd" name="confirm_password" 
+                        minlength="8" required/>
                     <div id="confirm_pwd-error"></div>
                 </div>
             </form>

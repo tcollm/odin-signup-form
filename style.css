@@ -93,6 +93,10 @@ form input:focus {
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
 }
 
+form input:invalid {
+    border: 1px solid red;
+}
+
 .login button {
     box-sizing: border-box;
     margin: 24px 32px;
@@ -117,11 +121,3 @@ form input:focus {
     }
 }
 
-
-/* TODO: 
-    - Fix legend
-    - Make buttons more responsive?
-    - Change input borders on click
-    - Change input confirmations (valid 
-    phone numbers, emails, etc.)
-*/
